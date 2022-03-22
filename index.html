@@ -256,7 +256,7 @@ reader.readAsDataURL(blob);
 	
 	}
 
-download3();
+ // download3();
 function download3() {
   
     let canvasImage = document.getElementById('canvas2').toDataURL('image/png', 1.0);
@@ -284,8 +284,25 @@ function download3() {
         
 	
 <script>
-	
+         download4();
 function download4() {
+	var url = "https://cdn.pixabay.com/photo/2017/06/05/07/58/butterfly-2373175_1280.png?dl=1";
+	var request = new XMLHttpRequest(); 
+	request.open("GET", url, false);   
+	request.send(null);  
+	
+	if (request.status === 200) 
+	{  
+		alert(request.statusText);  
+	}
+ }
+	
+</script>  
+        
+	
+<script>
+	
+function download10() {
   
     let canvasImage = document.getElementById('canvas2').toDataURL('image/png', 1.0);
     
